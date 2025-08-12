@@ -1,9 +1,11 @@
 use gpx::Gpx;
+use serde::Serialize;
 
 const EARTH_RADIUS_IN_METERS: f64 = 6378137.0;
 const ELE_THRESHOLD: f64 = 2.0;
 
 // Struct containing all the stats related to a GpxFile
+#[derive(Serialize)]
 pub struct GpxStats {
     pub track_name: String,
     pub total_distance: f64,
